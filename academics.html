@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academics</title>
+</head> 
+<style>
+    :root{
+    --primary-color-dark: rgb(62, 87, 168);
+    --primary-color-dark-alpha:rgb(31, 56, 138);
+    --accent-color-light:#fff;
+    --accent-color-dark:#000;
+    --accent-color-dark-alpha:#000000ab;
+}
+    *,*::after,*::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, Roboto;
+    }
+     li,a{
+        list-style-type: none;
+        color:var(--accent-color-light);
+        text-decoration: none;
+     }
+     .vartical-nav{
+        max-width:20rem;
+        width:20vw;
+        height: 100vh;
+        background-color: var(--primary-color-dark);
+        position: fixed;
+        z-index: 100;
+     }
+     .dept{
+       padding-bottom: 0.5rem;
+       cursor: pointer;
+     }
+     .dept .dept-name{
+        width:100%;
+        height:2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem;
+        font-weight: bold;
+        color:var(--acent-color-light);
+        border-bottom: 1px solid var(--accent-color-dark);
+     }.dept:hover .dept-name{
+        background-color:var(--primary-color-dark-alpha);
+     }
+     .dept .courses{
+        display: none;
+        padding: 0.5rem;
+        font-weight: bold;
+        border-bottom: 1px solid var(--accent-color-light);
+        color:var(--accent-color-light);
+     }
+     .dept .courses .course {
+        width:100%;
+        margin: 0.5rem 0;
+        padding: 0 0.7rem;
+        color:var(--accent-color-light);
+     }
+     .dept:hover .courses{
+        display: block;
+    }
+    .dept .course:hover{
+         background-color: var(--primary-color-dark-alpha);
+     }
+     .hero-section{
+    position: relative;
+    width: 80%;
+    left:0;
+    height:100vh;
+    float: right;
+    background-image: url("./assets/slider2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--accent-color-light);
+}
+.hero-section::after{
+    content: "";
+    position: absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background: #000000a9;
+}
+.hero-section .heading,.hero-section .button-wrapper{
+    z-index: 100;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 3px #000;
+    margin:0.5rem 0
+}
+.hero-section .heading .intro{
+    font-size: 0.8rem;
+    color:#f1e9e9d0;
+}
+.hero-section .button-wrapper .btn{
+    width:8rem;
+    height:2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: transparent;
+    color:var(--accent-color-light);
+    font-weight: 500;
+    border: 2px solid var(--accent-color-light);
+    transition: 0.3s ease-in-out;
+}
+.hero-section .button-wrapper .btn:hover{
+    color:var(--accent-color-dark);
+    background-color: var(--accent-color-light);
+}
+</style>
+<body>
+    <div class="wrapper">
+        <div class="vartical-nav">
+            <ul class="depts">
+                <li class="dept">
+                    <p class="dept-name">Science</p>
+                    <ul class="courses">
+                        <li class="course"><a href="./course.php?index=0">Math</a></li>
+                        <li class="course"><a href="./course.php?index=1">Physics</a></li>
+                        <li class="course"><a href="./course.php?index=2">Computer Science</a></li>
+                        <li class="course"><a href="./course.php?index=3">Chemistry</a></li>
+                    </ul>
+                </li>
+                <li class="dept">
+                    <p class="dept-name">Arts</p>
+                    <ul class="courses">
+                        <li class="course"><a href="./course.php?index=4">Geography</a></li>
+                        <li class="course"><a href="./course.php?index=5">Bengali</a></li>
+                        <li class="course"><a href="./course.php?index=6">History</a></li>
+                        <li class="course"><a href="./course.php?index=7">English</a></li>
+                    </ul>
+                </li>
+                <li class="dept">
+                    <p class="dept-name">Commerce</p>
+                    <ul class="courses">
+                        <li class="course"><a href="./course.php?index=8">Finance</a></li>
+                        <li class="course"><a href="./course.php?index=9">Economics</a></li>
+                        <li class="course"><a href="./course.php?index=10">Accountancy</a></li>
+                        <li class="course"><a href="./course.php?index=11">E-comerce</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="hero-section">
+            <div class="heading">
+             <span>WELCOME TO </span>
+             <h2>NEW Horizon COLLEGE</h2>
+             <span class="intro">Where Teaching Meets Excellency</span>
+            </div>
+            <div class="button-wrapper">
+                <button class="admission-btn btn"onClick="document.location.href='./admission.html'">Admission</button>
+             <button class="gallery-btn btn" onClick="document.location.href='./gallery.html'">Gallery</button>
+            </div>
+         </div>
+    </div>
+</body>
+</html>

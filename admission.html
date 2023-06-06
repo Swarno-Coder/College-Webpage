@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-admission</title>
+</head>
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    color:#21519E;
+}
+input:is([type=text],[type=date]){
+    border:none;
+    border-bottom:1px solid #21519E;
+    margin: 0.5rem 0;
+    color:#2726269c;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+}
+h1{
+    margin: 3rem 0;
+}
+input:focus{
+    outline: none;
+}
+button[type=submit]{
+    width:7rem;
+    height: 2rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    border: none;
+    color:#fff;
+    background-color: #21519E;
+}
+input[type=radio]{
+    position: relative;
+}
+form,.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}input[type=radio]::after{
+    content: attr(data-gender_type);
+    width:13rem;
+    height: 2rem;
+    left:110%;
+    position: relative;
+}
+.gender-wrapper{
+    display: flex;
+}
+.form-wrapper{
+    position: relative;
+    width:25rem;
+    height: fit-content;
+    margin:auto;
+    box-shadow: 0 1px 5px #21519e93;
+    padding: 0.5rem;
+}
+.gender-wrapper{
+    width:10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+</style>
+<body>
+    <div class="wrapper">
+        <h1>College Admission Form</h1>
+        <div class="form-wrapper">
+            <form  class="form">
+                <div class="info-wrapper">
+                    <input type="text" name="user_name" id="D_id"  placeholder="FullName">
+                    <input type="text" name="" id="" placeholder="Father's Name">
+                    <input type="text" name="" id="" placeholder="Mother's Name">
+                    <input type="date" name="user_password" id="D_id" placeholder="">
+                    <div class="gender-wrapper">
+                        <input type="radio" name="gender" id="" data-gender_type="Male">
+                        <input type="radio" name="gender" id="" data-gender_type="Female">
+                        <input type="radio" name="gender" id="" data-gender_type="Others">
+                    </div>
+                </div>
+                <input type="text" name="" id="" placeholder="Phone Number" inputmode="numeric">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
