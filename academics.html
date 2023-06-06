@@ -28,7 +28,7 @@
         height: 100vh;
         background-color: var(--primary-color-dark);
         position: fixed;
-        z-index: 100;
+        z-index: 2;
      }
      .dept{
        padding-bottom: 0.5rem;
@@ -44,10 +44,10 @@
         font-weight: bold;
         color:var(--acent-color-light);
         border-bottom: 1px solid var(--accent-color-dark);
-     }.dept:hover .dept-name{
+    }.dept:hover .dept-name{
         background-color:var(--primary-color-dark-alpha);
-     }
-     .dept .courses{
+    }
+    .dept .courses{
         display: none;
         padding: 0.5rem;
         font-weight: bold;
@@ -59,12 +59,12 @@
         margin: 0.5rem 0;
         padding: 0 0.7rem;
         color:var(--accent-color-light);
-     }
-     .dept:hover .courses{
+    }
+    .dept:hover .courses{
         display: block;
     }
     .dept .course:hover{
-         background-color: var(--primary-color-dark-alpha);
+        background-color: var(--primary-color-dark-alpha);
      }
      .hero-section{
     position: relative;
@@ -91,7 +91,7 @@
     background: #000000a9;
 }
 .hero-section .heading,.hero-section .button-wrapper{
-    z-index: 100;
+    z-index: 1;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
@@ -165,5 +165,21 @@
             </div>
          </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var departments = document.querySelectorAll(".dept");
+      
+        departments.forEach(function (dept) {
+          var deptCourses = dept.querySelector(".courses");
+          dept.addEventListener("mouseenter", function () {
+            deptCourses.style.display = "block";
+          });
+      
+          dept.addEventListener("mouseleave", function () {
+            deptCourses.style.display = "none";
+          });
+        });
+      });
+      </script>
 </body>
 </html>
