@@ -40,8 +40,8 @@ body {
 }
 
 .navbar-left img {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -115,37 +115,6 @@ body {
   opacity: 1;
   right: 0;
 }
-
-
-/* Slider */
-/* Slider 
-#slider {
-  position: relative;
-  height: 600px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.slider-container {
-  position: relative;
-  height: 100%;
-}
-
-.slider-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slider-container img.active {
-  opacity: 1;
-}
-*/
-
 /* Slider */
 #slider {
   position: relative;
@@ -217,8 +186,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
 }
-
-
 /* Opportunity and Why Us Sections */
 section {
   margin-bottom: 0px;
@@ -240,6 +207,10 @@ section p {
 }
 #why-us{
   background-color: antiquewhite;
+}
+
+#why-us p, #opportunity p{
+  margin: auto 3rem;
 }
 
 .features {
@@ -305,7 +276,9 @@ section p {
   padding-left: 10rem;
   font-size: 22px;
   text-align: center;
-  color: aqua;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 
 #principal img {
@@ -345,6 +318,8 @@ section p {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-top: 0.5rem;
+  padding-bottom: 2.8rem;
 }
 
 .company-slider img {

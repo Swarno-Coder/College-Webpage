@@ -11,23 +11,16 @@
         margin:0;
         padding:0;
         box-sizing:border-box;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
     }
     h3,ul{
         margin:0.5rem;
-    }
-    .cover-section{
-        width:100svw;
-        height:50svh;
-        position: relative;
-    }
-    .cover-section img{
-        position: absolute;
-        width:100%;
-        height:100%;
+        padding-left: 1rem;
+        
     }
     .info-wrapper{
         position: relative;
-        width:100svw;
+        width:100vw;
         padding:1rem 1rem;
         font-size:1.1rem;
     }
@@ -40,21 +33,17 @@
 </style>
 <body>
     <?php
-        include 'dataRouting.php';
+        include 'dataRoute.php';
         $json=json_decode($info,true);
 
     ?>
-    <div class="cover-section" >
-    <img src=<?php echo $json[$_GET["index"]]["img"]; ?> alt="" loading="eager">
-
-    </div>
     <div class="info-wrapper">
         <h1>Department of 
             <?php echo $json[$_GET["index"]]["name"]; ?>
         </h1>
         <span><?php echo $json[$_GET["index"]]["description"]; ?></span>
     </div>
-    <h3>Our faculty</h3>
+    <h3 style="border-bottom:1px solid #000; width:20%;">Our faculty</h3>
     <ul>
         <?php
             for($x=0;$x<3;$x++){
